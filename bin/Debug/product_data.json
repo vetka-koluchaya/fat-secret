@@ -1,0 +1,72 @@
+[
+  {
+    "Name": "Apple",
+    "Protein": 0.4,
+    "Fat": 0.4,
+    "Carbohydrates": 14,
+    "Сalories": 52
+  },
+  {
+    "Name": "Beef",
+    "Protein": 26,
+    "Fat": 17,
+    "Carbohydrates": 0,
+    "Сalories": 250
+  },
+  {
+    "Name": "Chicken(breast)",
+    "Protein": 31,
+    "Fat": 3.6,
+    "Carbohydrates": 0,
+    "Сalories": 165
+  },
+  {
+    "Name": "Salmon",
+    "Protein": 20,
+    "Fat": 13,
+    "Carbohydrates": 0,
+    "Сalories": 206
+  },
+  {
+    "Name": "Milk",
+    "Protein": 3.2,
+    "Fat": 3.9,
+    "Carbohydrates": 4.7,
+    "Сalories": 60
+  },
+  {
+    "Name": "Oatmeal",
+    "Protein": 13,
+    "Fat": 6,
+    "Carbohydrates": 60,
+    "Сalories": 389
+  },
+  {
+    "Name": "Bread",
+    "Protein": 12,
+    "Fat": 3,
+    "Carbohydrates": 45,
+    "Сalories": 247
+  },
+  {
+    "Name": "Banana",
+    "Protein": 1.1,
+    "Fat": 0.3,
+    "Carbohydrates": 22,
+    "Сalories": 96
+  },
+  {
+    "Name": "Spinach",
+    "Protein": 2.9,
+    "Fat": 0.4,
+    "Carbohydrates": 3.6,
+    "Сalories": 23
+  },
+  {
+    "Name": "Yogurt",
+    "Protein": 5,
+    "Fat": 0.4,
+    "Carbohydrates": 6.6,
+    "Сalories": 48
+  },
+]
