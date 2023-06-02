@@ -29,38 +29,43 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.current_kkal = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.add_button = new System.Windows.Forms.Button();
             this.pb_total_kkal = new System.Windows.Forms.ProgressBar();
             this.dt_Date = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.dg_dinner = new System.Windows.Forms.DataGridView();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinner_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinner_product_weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinner_product_proteins = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinner_product_fats = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinner_product_carbonhydrates = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinner_product_calories = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.dg_lunch = new System.Windows.Forms.DataGridView();
-            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunch_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunch_product_weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunch_product_proteins = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunch_product_fats = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunch_product_carbonhydrates = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunch_product_calories = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.dg_breakfast = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breakfast_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breakfast_product_weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breakfast_product_proteins = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breakfast_product_fats = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breakfast_product_carbonhydrates = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breakfast_product_calories = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.gist_week = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.tb_height = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_RSK = new System.Windows.Forms.TextBox();
@@ -78,16 +83,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gist_week = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.make_report = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_dinner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_lunch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_breakfast)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gist_week)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_KA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gist_week)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -103,6 +108,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.current_kkal);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.add_button);
             this.tabPage1.Controls.Add(this.pb_total_kkal);
             this.tabPage1.Controls.Add(this.dt_Date);
             this.tabPage1.Controls.Add(this.label11);
@@ -119,11 +128,51 @@
             this.tabPage1.Text = "Дневник";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(188, 571);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(9, 13);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "|";
+            // 
+            // current_kkal
+            // 
+            this.current_kkal.AutoSize = true;
+            this.current_kkal.Location = new System.Drawing.Point(142, 571);
+            this.current_kkal.Name = "current_kkal";
+            this.current_kkal.Size = new System.Drawing.Size(13, 13);
+            this.current_kkal.TabIndex = 36;
+            this.current_kkal.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 571);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(139, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Употребленные калории: ";
+            // 
+            // add_button
+            // 
+            this.add_button.Location = new System.Drawing.Point(381, 21);
+            this.add_button.Name = "add_button";
+            this.add_button.Size = new System.Drawing.Size(75, 23);
+            this.add_button.TabIndex = 1;
+            this.add_button.Text = "Добавить";
+            this.add_button.UseVisualStyleBackColor = true;
+            this.add_button.Click += new System.EventHandler(this.add_button_Click);
+            // 
             // pb_total_kkal
             // 
+            this.pb_total_kkal.BackColor = System.Drawing.Color.Yellow;
+            this.pb_total_kkal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pb_total_kkal.Location = new System.Drawing.Point(10, 587);
             this.pb_total_kkal.Name = "pb_total_kkal";
             this.pb_total_kkal.Size = new System.Drawing.Size(363, 23);
+            this.pb_total_kkal.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pb_total_kkal.TabIndex = 35;
             // 
             // dt_Date
@@ -153,57 +202,59 @@
             this.dg_dinner.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dg_dinner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_dinner.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewComboBoxColumn2,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
+            this.dinner_product,
+            this.dinner_product_weight,
+            this.dinner_product_proteins,
+            this.dinner_product_fats,
+            this.dinner_product_carbonhydrates,
+            this.dinner_product_calories});
             this.dg_dinner.Location = new System.Drawing.Point(10, 432);
             this.dg_dinner.Name = "dg_dinner";
             this.dg_dinner.RowHeadersVisible = false;
-            this.dg_dinner.Size = new System.Drawing.Size(363, 110);
+            this.dg_dinner.Size = new System.Drawing.Size(313, 110);
             this.dg_dinner.TabIndex = 33;
+            this.dg_dinner.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_dinner_CellContentDoubleClick);
             // 
-            // dataGridViewComboBoxColumn2
+            // dinner_product
             // 
-            this.dataGridViewComboBoxColumn2.FillWeight = 120F;
-            this.dataGridViewComboBoxColumn2.Frozen = true;
-            this.dataGridViewComboBoxColumn2.HeaderText = "Продукт";
-            this.dataGridViewComboBoxColumn2.MinimumWidth = 120;
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Width = 150;
+            this.dinner_product.HeaderText = "Продукт";
+            this.dinner_product.Name = "dinner_product";
+            this.dinner_product.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // dinner_product_weight
             // 
-            this.dataGridViewTextBoxColumn6.Frozen = true;
-            this.dataGridViewTextBoxColumn6.HeaderText = "г";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 40;
+            this.dinner_product_weight.HeaderText = "г";
+            this.dinner_product_weight.Name = "dinner_product_weight";
+            this.dinner_product_weight.ReadOnly = true;
+            this.dinner_product_weight.Width = 40;
             // 
-            // dataGridViewTextBoxColumn7
+            // dinner_product_proteins
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Б";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 40;
+            this.dinner_product_proteins.HeaderText = "Б";
+            this.dinner_product_proteins.Name = "dinner_product_proteins";
+            this.dinner_product_proteins.ReadOnly = true;
+            this.dinner_product_proteins.Width = 40;
             // 
-            // dataGridViewTextBoxColumn8
+            // dinner_product_fats
             // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Ж";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 40;
+            this.dinner_product_fats.HeaderText = "Ж";
+            this.dinner_product_fats.Name = "dinner_product_fats";
+            this.dinner_product_fats.ReadOnly = true;
+            this.dinner_product_fats.Width = 40;
             // 
-            // dataGridViewTextBoxColumn9
+            // dinner_product_carbonhydrates
             // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "У";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 40;
+            this.dinner_product_carbonhydrates.HeaderText = "У";
+            this.dinner_product_carbonhydrates.Name = "dinner_product_carbonhydrates";
+            this.dinner_product_carbonhydrates.ReadOnly = true;
+            this.dinner_product_carbonhydrates.Width = 40;
             // 
-            // dataGridViewTextBoxColumn10
+            // dinner_product_calories
             // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "ккал";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 50;
+            this.dinner_product_calories.HeaderText = "ккал";
+            this.dinner_product_calories.Name = "dinner_product_calories";
+            this.dinner_product_calories.ReadOnly = true;
+            this.dinner_product_calories.Width = 50;
             // 
             // label10
             // 
@@ -222,57 +273,58 @@
             this.dg_lunch.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dg_lunch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_lunch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewComboBoxColumn1,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.lunch_product,
+            this.lunch_product_weight,
+            this.lunch_product_proteins,
+            this.lunch_product_fats,
+            this.lunch_product_carbonhydrates,
+            this.lunch_product_calories});
             this.dg_lunch.Location = new System.Drawing.Point(10, 254);
             this.dg_lunch.Name = "dg_lunch";
             this.dg_lunch.RowHeadersVisible = false;
-            this.dg_lunch.Size = new System.Drawing.Size(363, 110);
+            this.dg_lunch.Size = new System.Drawing.Size(313, 110);
             this.dg_lunch.TabIndex = 31;
+            this.dg_lunch.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_lunch_CellContentDoubleClick);
             // 
-            // dataGridViewComboBoxColumn1
+            // lunch_product
             // 
-            this.dataGridViewComboBoxColumn1.FillWeight = 120F;
-            this.dataGridViewComboBoxColumn1.Frozen = true;
-            this.dataGridViewComboBoxColumn1.HeaderText = "Продукт";
-            this.dataGridViewComboBoxColumn1.MinimumWidth = 120;
-            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
-            this.dataGridViewComboBoxColumn1.Width = 150;
+            this.lunch_product.HeaderText = "Продукт";
+            this.lunch_product.Name = "lunch_product";
+            this.lunch_product.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // lunch_product_weight
             // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "г";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 40;
+            this.lunch_product_weight.HeaderText = "г";
+            this.lunch_product_weight.Name = "lunch_product_weight";
+            this.lunch_product_weight.ReadOnly = true;
+            this.lunch_product_weight.Width = 40;
             // 
-            // dataGridViewTextBoxColumn2
+            // lunch_product_proteins
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Б";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 40;
+            this.lunch_product_proteins.HeaderText = "Б";
+            this.lunch_product_proteins.Name = "lunch_product_proteins";
+            this.lunch_product_proteins.ReadOnly = true;
+            this.lunch_product_proteins.Width = 40;
             // 
-            // dataGridViewTextBoxColumn3
+            // lunch_product_fats
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ж";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 40;
+            this.lunch_product_fats.HeaderText = "Ж";
+            this.lunch_product_fats.Name = "lunch_product_fats";
+            this.lunch_product_fats.ReadOnly = true;
+            this.lunch_product_fats.Width = 40;
             // 
-            // dataGridViewTextBoxColumn4
+            // lunch_product_carbonhydrates
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "У";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 40;
+            this.lunch_product_carbonhydrates.HeaderText = "У";
+            this.lunch_product_carbonhydrates.Name = "lunch_product_carbonhydrates";
+            this.lunch_product_carbonhydrates.ReadOnly = true;
+            this.lunch_product_carbonhydrates.Width = 40;
             // 
-            // dataGridViewTextBoxColumn5
+            // lunch_product_calories
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "ккал";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 50;
+            this.lunch_product_calories.HeaderText = "ккал";
+            this.lunch_product_calories.Name = "lunch_product_calories";
+            this.lunch_product_calories.Width = 50;
             // 
             // label9
             // 
@@ -291,60 +343,63 @@
             this.dg_breakfast.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dg_breakfast.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_breakfast.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column5,
-            this.Column4,
-            this.Column6});
+            this.breakfast_product,
+            this.breakfast_product_weight,
+            this.breakfast_product_proteins,
+            this.breakfast_product_fats,
+            this.breakfast_product_carbonhydrates,
+            this.breakfast_product_calories});
             this.dg_breakfast.Location = new System.Drawing.Point(10, 89);
             this.dg_breakfast.Name = "dg_breakfast";
             this.dg_breakfast.RowHeadersVisible = false;
-            this.dg_breakfast.Size = new System.Drawing.Size(363, 110);
+            this.dg_breakfast.Size = new System.Drawing.Size(313, 110);
             this.dg_breakfast.TabIndex = 1;
+            this.dg_breakfast.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_breakfast_CellDoubleClick);
             // 
-            // Column1
+            // breakfast_product
             // 
-            this.Column1.FillWeight = 120F;
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "Продукт";
-            this.Column1.MinimumWidth = 120;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
+            this.breakfast_product.HeaderText = "Продукт";
+            this.breakfast_product.Name = "breakfast_product";
+            this.breakfast_product.ReadOnly = true;
             // 
-            // Column2
+            // breakfast_product_weight
             // 
-            this.Column2.Frozen = true;
-            this.Column2.HeaderText = "г";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 40;
+            this.breakfast_product_weight.HeaderText = "г";
+            this.breakfast_product_weight.Name = "breakfast_product_weight";
+            this.breakfast_product_weight.ReadOnly = true;
+            this.breakfast_product_weight.Width = 40;
             // 
-            // Column3
+            // breakfast_product_proteins
             // 
-            this.Column3.HeaderText = "Б";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 40;
+            this.breakfast_product_proteins.HeaderText = "Б";
+            this.breakfast_product_proteins.Name = "breakfast_product_proteins";
+            this.breakfast_product_proteins.ReadOnly = true;
+            this.breakfast_product_proteins.Width = 40;
             // 
-            // Column5
+            // breakfast_product_fats
             // 
-            this.Column5.HeaderText = "Ж";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 40;
+            this.breakfast_product_fats.HeaderText = "Ж";
+            this.breakfast_product_fats.Name = "breakfast_product_fats";
+            this.breakfast_product_fats.ReadOnly = true;
+            this.breakfast_product_fats.Width = 40;
             // 
-            // Column4
+            // breakfast_product_carbonhydrates
             // 
-            this.Column4.HeaderText = "У";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 40;
+            this.breakfast_product_carbonhydrates.HeaderText = "У";
+            this.breakfast_product_carbonhydrates.Name = "breakfast_product_carbonhydrates";
+            this.breakfast_product_carbonhydrates.ReadOnly = true;
+            this.breakfast_product_carbonhydrates.Width = 40;
             // 
-            // Column6
+            // breakfast_product_calories
             // 
-            this.Column6.HeaderText = "ккал";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 50;
+            this.breakfast_product_calories.HeaderText = "ккал";
+            this.breakfast_product_calories.Name = "breakfast_product_calories";
+            this.breakfast_product_calories.ReadOnly = true;
+            this.breakfast_product_calories.Width = 50;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.make_report);
             this.tabPage2.Controls.Add(this.gist_week);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -354,8 +409,24 @@
             this.tabPage2.Text = "Отчёты";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // gist_week
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.gist_week.ChartAreas.Add(chartArea1);
+            this.gist_week.Location = new System.Drawing.Point(29, 125);
+            this.gist_week.Name = "gist_week";
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.gist_week.Series.Add(series1);
+            this.gist_week.Size = new System.Drawing.Size(410, 376);
+            this.gist_week.TabIndex = 0;
+            this.gist_week.Text = "chart1";
+            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.tb_height);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.tb_RSK);
@@ -380,6 +451,15 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Рассчёт РСК";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(311, 399);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "ккал";
             // 
             // tb_height
             // 
@@ -426,6 +506,7 @@
             this.btn_RSK.TabIndex = 41;
             this.btn_RSK.Text = "Рассчитать РСК";
             this.btn_RSK.UseVisualStyleBackColor = true;
+            this.btn_RSK.Click += new System.EventHandler(this.btn_RSK_Click);
             // 
             // pb_KA
             // 
@@ -546,21 +627,15 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Ввести параметры";
             // 
-            // gist_week
+            // make_report
             // 
-            chartArea1.Name = "ChartArea1";
-            this.gist_week.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.gist_week.Legends.Add(legend1);
-            this.gist_week.Location = new System.Drawing.Point(66, 118);
-            this.gist_week.Name = "gist_week";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.gist_week.Series.Add(series1);
-            this.gist_week.Size = new System.Drawing.Size(300, 300);
-            this.gist_week.TabIndex = 0;
-            this.gist_week.Text = "chart1";
+            this.make_report.Location = new System.Drawing.Point(181, 96);
+            this.make_report.Name = "make_report";
+            this.make_report.Size = new System.Drawing.Size(126, 23);
+            this.make_report.TabIndex = 1;
+            this.make_report.Text = "Сделать отчёт";
+            this.make_report.UseVisualStyleBackColor = true;
+            this.make_report.Click += new System.EventHandler(this.make_report_Click);
             // 
             // main_window
             // 
@@ -568,6 +643,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 661);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "main_window";
             this.Text = "Fat Secret";
             this.tabControl1.ResumeLayout(false);
@@ -577,10 +653,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dg_lunch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_breakfast)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gist_week)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_KA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gist_week)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -609,32 +685,38 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dg_breakfast;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dg_dinner;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dg_lunch;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dt_Date;
         private System.Windows.Forms.ProgressBar pb_total_kkal;
         private System.Windows.Forms.DataVisualization.Charting.Chart gist_week;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn breakfast_product;
+        private System.Windows.Forms.DataGridViewTextBoxColumn breakfast_product_weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn breakfast_product_proteins;
+        private System.Windows.Forms.DataGridViewTextBoxColumn breakfast_product_fats;
+        private System.Windows.Forms.DataGridViewTextBoxColumn breakfast_product_carbonhydrates;
+        private System.Windows.Forms.DataGridViewTextBoxColumn breakfast_product_calories;
+        private System.Windows.Forms.Button add_button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dinner_product;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dinner_product_weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dinner_product_proteins;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dinner_product_fats;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dinner_product_carbonhydrates;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dinner_product_calories;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lunch_product;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lunch_product_weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lunch_product_proteins;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lunch_product_fats;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lunch_product_carbonhydrates;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lunch_product_calories;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label current_kkal;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button make_report;
     }
 }
 
